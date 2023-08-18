@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Blurred it",
+  "version": "0.0.5",
+  "description": "Apply a customized level of blurring to the content of any webpage.",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "js/background.bundle.js"
+  },
+  "icons": {
+    "16": "assets/logo (3)-1.png",
+    "48": "assets/logo (3)-2.png",
+    "128": "assets/logo (3)-3.png"
+  },
+  "externally_connectable": {
+    "matches": ["*://*.google.com/*"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/logo (3)-1.png",
+      "48": "assets/logo (3)-2.png",
+      "128": "assets/logo (3)-3.png"
+    },
+    "default_title": "Blurred it"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["js/content.bundle.js"],
+      "css": ["css/content.css"]
+    }
+  ]
+}
