@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Blurred it",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Apply a customized level of blurring to the content of any webpage.",
   "permissions": ["activeTab", "storage"],
   "background": {
